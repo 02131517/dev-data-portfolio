@@ -1,69 +1,131 @@
-import Image from "next/image";
+
+import Hero from "./components/Hero";
+
+import Projects from "./components/Projects";
+
+const skills = [
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Python",
+  "SQL",
+  "Power BI",
+];
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+    <main className="min-h-screen bg-[#080b14] text-white">
+      {/* Efeitos de iluminação */}
+      <div className="pointer-events-none fixed inset-0 overflow-hidden">
+        <div className="absolute -top-40 right-0 h-125 w-125 rounded-full bg-blue-600/15 blur-[130px]" />
+        <div className="absolute left-0 top-125 h-100 w-100 rounded-full bg-violet-600/10 blur-[120px]" />
+      </div>
+
+      <div className="relative z-10">
+        {/* Navegação */}
+        <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
+          <a href="#" className="text-xl font-bold tracking-tight">
+            JK<span className="text-blue-500">.</span>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+          <nav className="flex items-center gap-5 text-sm text-slate-400 sm:gap-8">
+            <a href="#sobre" className="transition hover:text-white">
+              Sobre
+            </a>
+            <a href="#projetos" className="transition hover:text-white">
+              Projetos
+            </a>
+            <a href="#contato" className="transition hover:text-white">
+              Contato
+            </a>
+          </nav>
+        </header>
+
+        {/* Apresentação principal - Home 2.0 */}
+        <Hero />
+
+        {/* Sobre */}
+        <section id="sobre" className="border-t border-white/10 bg-white/2">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-2">
+            <div>
+              <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
+                01 / Sobre mim
+              </p>
+
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Código, dados e{" "}
+                <span className="text-blue-400">soluções.</span>
+              </h2>
+            </div>
+
+            <div>
+              <p className="leading-8 text-slate-400">
+                Sou estudante de Análise e Desenvolvimento de
+                Sistemas, com interesse em desenvolvimento de
+                aplicações web, análise de dados e Business
+                Intelligence.
+              </p>
+
+              <p className="mt-5 leading-8 text-slate-400">
+                Meu objetivo é construir soluções que combinem
+                interfaces funcionais, organização de dados e
+                visualizações que facilitem a compreensão de
+                informações.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Projetos - Bento Grid 2.0 */}
+        <Projects />
+
+        {/* Contato */}
+        <section id="contato" className="border-t border-white/10 bg-white/2">
+          <div className="mx-auto max-w-6xl px-6 py-24 text-center">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
+              03 / Contato
+            </p>
+
+            <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">
+              Vamos construir algo{" "}
+              <span className="text-blue-400">incrível?</span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-xl leading-8 text-slate-400">
+              Estou desenvolvendo meu portfólio e aberto a
+              conexões, aprendizado e oportunidades na área
+              de tecnologia.
+            </p>
+
+            <a
+              href="https://github.com/02131517"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-block rounded-xl bg-blue-600 px-8 py-4 font-semibold transition hover:bg-blue-500"
+            >
+              Conectar pelo GitHub ↗
+            </a>
+          </div>
+        </section>
+
+        {/* Rodapé */}
+        <footer className="mx-auto flex max-w-6xl flex-col justify-between gap-4 px-6 py-8 text-sm text-slate-500 sm:flex-row">
+          <p>© 2026 Joel Kaltner. Todos os direitos reservados.</p>
+          <p>Desenvolvido com Next.js, TypeScript e Tailwind CSS.</p>
+        </footer>
+      </div>
+    </main>
   );
 }
