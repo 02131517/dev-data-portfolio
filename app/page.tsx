@@ -1,4 +1,8 @@
 
+import Hero from "./components/Hero";
+
+import Projects from "./components/Projects";
+
 const skills = [
   "TypeScript",
   "React",
@@ -64,59 +68,8 @@ export default function Home() {
           </nav>
         </header>
 
-        {/* Apresentação principal */}
-        <section className="mx-auto flex min-h-[75vh] max-w-6xl flex-col justify-center px-6 py-20">
-          <div className="mb-8 w-fit rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-xs font-medium tracking-wide text-blue-300">
-            DESENVOLVIMENTO WEB • DATA ANALYTICS • BI
-          </div>
-
-          <p className="mb-4 text-lg text-slate-400">
-            Olá, eu sou
-          </p>
-
-          <h1 className="max-w-5xl text-5xl font-extrabold tracking-tight sm:text-7xl lg:text-8xl">
-            Joel{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-violet-500 bg-clip-text text-transparent">
-              Kaltner.
-            </span>
-          </h1>
-
-          <h2 className="mt-8 max-w-3xl text-xl font-medium text-slate-200 sm:text-2xl">
-            Estudante de ADS{" "}
-            <span className="text-blue-400">|</span>{" "}
-            Desenvolvimento & Business Intelligence
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-            Explorando a conexão entre tecnologia e dados.
-            Desenvolvo minhas habilidades na criação de
-            aplicações web e na transformação de informações
-            em análises que apoiam decisões.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#projetos"
-              className="rounded-xl bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-500"
-            >
-              Explorar projetos ↗
-            </a>
-
-            <a
-              href="https://github.com/02131517"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl border border-slate-700 px-7 py-4 font-semibold transition hover:border-blue-500 hover:bg-white/5"
-            >
-              Meu GitHub ↗
-            </a>
-          </div>
-
-          <div className="mt-20 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-slate-500">
-            <span className="h-px w-10 bg-blue-500" />
-            Conheça meu trabalho
-          </div>
-        </section>
+        {/* Apresentação principal - Home 2.0 */}
+        <Hero />
 
         {/* Sobre */}
         <section id="sobre" className="border-t border-white/10 bg-white/[0.02]">
@@ -161,63 +114,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projetos */}
-        <section id="projetos" className="mx-auto max-w-6xl px-6 py-28">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
-            02 / Portfólio
-          </p>
-
-          <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
-            Projetos & Experimentos<span className="text-blue-500">.</span>
-          </h2>
-
-          <p className="mt-5 max-w-2xl leading-8 text-slate-400">
-            Projetos planejados para explorar desenvolvimento
-            web, análise de dados e soluções de Business
-            Intelligence.
-          </p>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {projects.map((project) => (
-              <article
-                key={project.number}
-                className="group flex flex-col rounded-2xl border border-white/10 bg-[#101624] p-7 transition duration-300 hover:-translate-y-2 hover:border-blue-500/50"
-              >
-                <div className="mb-12 flex items-start justify-between">
-                  <span className="text-4xl font-bold text-white/10">
-                    {project.number}
-                  </span>
-                  <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-[10px] font-medium text-amber-300">
-                    PLANEJADO
-                  </span>
-                </div>
-
-                <p className="text-xs font-semibold tracking-widest text-blue-400">
-                  {project.category}
-                </p>
-
-                <h3 className="mt-4 text-2xl font-bold">
-                  {project.title}
-                </h3>
-
-                <p className="mt-4 flex-1 text-sm leading-7 text-slate-400">
-                  {project.description}
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-md bg-white/5 px-3 py-2 text-xs text-slate-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        {/* Projetos - Bento Grid 2.0 */}
+        <Projects />
 
         {/* Contato */}
         <section id="contato" className="border-t border-white/10 bg-white/[0.02]">
