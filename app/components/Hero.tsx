@@ -10,7 +10,7 @@ const chartBars = [35, 55, 42, 75, 60, 88, 72, 100, 82, 95];
 export default function Hero() {
   return (
       
-      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32">
+      <section className="relative isolate overflow-hidden px-6 py-14 sm:py-24 lg:py-32">
      
       {/* Iluminação de fundo */}
       <div className="pointer-events-none absolute inset-0 -z-10">
