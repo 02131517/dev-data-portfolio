@@ -14,8 +14,8 @@ export default function Hero() {
      
       {/* Iluminação de fundo */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 left-1/3 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[130px]" />
-        <div className="absolute right-0 top-40 h-[400px] w-[400px] rounded-full bg-violet-600/15 blur-[120px]" />
+        <div className="absolute -top-40 left-1/3 h-125 w-125 rounded-full bg-blue-600/20 blur-[130px]" />
+        <div className="absolute right-0 top-40 h-100 w-100 rounded-full bg-violet-600/15 blur-[120px]" />
       </div>
 
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
@@ -35,7 +35,7 @@ export default function Hero() {
           <h1 className="text-5xl font-extrabold leading-tight tracking-tight sm:text-7xl">
             Joel
             <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
               Kaltner.
             </span>
           </h1>
@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#projetos"
-              className="rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-7 py-4 font-semibold text-white transition hover:brightness-125"
+              className="rounded-xl bg-linear-to-r from-blue-600 to-violet-600 px-7 py-4 font-semibold text-white transition hover:brightness-125"
             >
               Explorar projetos ↗
             </a>
@@ -73,7 +73,7 @@ export default function Hero() {
 
         {/* Painel visual de BI */}
         <div className="relative animate-fade-up animate-delay-350">
-          <div className="absolute -inset-5 rounded-3xl bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
+          <div className="absolute -inset-5 rounded-3xl bg-linear-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
 
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#101827]/90 p-6 shadow-2xl backdrop-blur-xl">
             <div className="mb-8 flex items-center justify-between">
@@ -124,7 +124,7 @@ export default function Hero() {
                     className="flex h-full flex-1 items-end"
                   >
                     <div
-                      className="w-full rounded-t-md bg-gradient-to-t from-blue-700 to-cyan-400"
+                      className="w-full rounded-t-md bg-linear-to-t from-blue-700 to-cyan-400"
                       style={{ height: `${height}%` }}
                     />
                   </div>

@@ -12,40 +12,14 @@ const skills = [
   "Power BI",
 ];
 
-const projects = [
-  {
-    number: "01",
-    category: "BUSINESS INTELLIGENCE",
-    title: "Dashboard de Vendas",
-    description:
-      "Análise de indicadores comerciais, faturamento e desempenho para apoiar decisões estratégicas.",
-    technologies: ["Power BI", "SQL", "Python"],
-  },
-  {
-    number: "02",
-    category: "DESENVOLVIMENTO WEB",
-    title: "Sistema de Gestão",
-    description:
-      "Aplicação web com autenticação, gerenciamento de registros e integração com banco de dados.",
-    technologies: ["Next.js", "TypeScript", "SQL"],
-  },
-  {
-    number: "03",
-    category: "WEB + DATA ANALYTICS",
-    title: "Plataforma de Analytics",
-    description:
-      "Uma plataforma para visualizar indicadores, explorar dados e transformar informações em insights.",
-    technologies: ["React", "Python", "Data Viz"],
-  },
-];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#080b14] text-white">
       {/* Efeitos de iluminação */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/15 blur-[130px]" />
-        <div className="absolute left-0 top-[500px] h-[400px] w-[400px] rounded-full bg-violet-600/10 blur-[120px]" />
+        <div className="absolute -top-40 right-0 h-125 w-125 rounded-full bg-blue-600/15 blur-[130px]" />
+        <div className="absolute left-0 top-125 h-100 w-100 rounded-full bg-violet-600/10 blur-[120px]" />
       </div>
 
       <div className="relative z-10">
@@ -72,7 +46,7 @@ export default function Home() {
         <Hero />
 
         {/* Sobre */}
-        <section id="sobre" className="border-t border-white/10 bg-white/[0.02]">
+        <section id="sobre" className="border-t border-white/10 bg-white/2">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-2">
             <div>
               <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
@@ -118,7 +92,7 @@ export default function Home() {
         <Projects />
 
         {/* Contato */}
-        <section id="contato" className="border-t border-white/10 bg-white/[0.02]">
+        <section id="contato" className="border-t border-white/10 bg-white/2">
           <div className="mx-auto max-w-6xl px-6 py-24 text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-blue-400">
               03 / Contato

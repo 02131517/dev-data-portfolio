@@ -50,8 +50,8 @@ export default function Projects() {
 
       <div className="grid gap-5 lg:grid-cols-2">
         {/* Projeto principal: BI */}
-        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition duration-300 hover:-translate-y-1 hover:border-cyan-500/40 lg:row-span-2">
-          <div className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-blue-950 via-[#111b37] to-violet-950 p-6 sm:p-8">
+        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/10 lg:row-span-2">
+          <div className="relative overflow-hidden border-b border-white/10 bg-linear-to-br from-blue-950 via-[#111b37] to-violet-950 p-6 sm:p-8">
             <div className="mb-6 flex items-center justify-between">
               <span className="font-mono text-xs text-cyan-300">
                 BUSINESS INTELLIGENCE
@@ -102,7 +102,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-white/[0.03] p-4">
+              <div className="rounded-xl bg-white/3 p-4">
                 <div className="mb-4 flex justify-between text-xs text-slate-400">
                   <span>Evolução de vendas</span>
                   <span>DEMO</span>
@@ -115,7 +115,7 @@ export default function Projects() {
                       className="flex h-full flex-1 items-end"
                     >
                       <div
-                        className="w-full rounded-t bg-gradient-to-t from-blue-700 to-cyan-400"
+                        className="w-full rounded-t bg-linear-to-t from-blue-700 to-cyan-400"
                         style={{ height: `${height}%` }}
                       />
                     </div>
@@ -147,8 +147,8 @@ export default function Projects() {
         </article>
 
         {/* Projeto Web */}
-        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition duration-300 hover:-translate-y-1 hover:border-violet-500/40">
-          <div className="border-b border-white/10 bg-gradient-to-br from-violet-950/70 to-[#0b1222] p-6">
+        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-violet-400/40 hover:shadow-lg hover:shadow-violet-500/10">
+          <div className="border-b border-white/10 bg-linear-to-br from-violet-950/70 to-[#0b1222] p-6">
             <div className="mb-5 flex items-center justify-between">
               <span className="font-mono text-xs text-violet-300">
                 WEB DEVELOPMENT
@@ -203,8 +203,8 @@ export default function Projects() {
         </article>
 
         {/* Projeto Data */}
-        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition duration-300 hover:-translate-y-1 hover:border-blue-500/40">
-          <div className="border-b border-white/10 bg-gradient-to-br from-blue-950/70 to-[#0b1222] p-6">
+        <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101827] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/10">
+          <div className="border-b border-white/10 bg-linear-to-br from-blue-950/70 to-[#0b1222] p-6">
             <div className="mb-5 flex items-center justify-between">
               <span className="font-mono text-xs text-blue-300">
                 DATA ANALYTICS
@@ -222,7 +222,7 @@ export default function Projects() {
                     className="flex h-full flex-1 items-end"
                   >
                     <div
-                      className="w-full rounded-t-md bg-gradient-to-t from-violet-700 to-blue-400"
+                      className="w-full rounded-t-md bg-linear-to-t from-violet-700 to-blue-400"
                       style={{ height: `${height}%` }}
                     />
                   </div>
