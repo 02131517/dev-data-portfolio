@@ -9,7 +9,9 @@ const chartBars = [35, 55, 42, 75, 60, 88, 72, 100, 82, 95];
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32">
+      
+      <section className="relative isolate overflow-hidden px-6 py-24 sm:py-32">
+     
       {/* Iluminação de fundo */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-40 left-1/3 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[130px]" />
@@ -18,7 +20,7 @@ export default function Hero() {
 
       <div className="mx-auto grid max-w-6xl items-center gap-16 lg:grid-cols-2">
         {/* Apresentação */}
-        <div>
+        <div className="animate-fade-up animate-delay-150">
           <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-cyan-500/20 bg-cyan-500/5 px-4 py-2">
             <span className="h-2 w-2 rounded-full bg-cyan-400" />
             <span className="text-xs font-medium tracking-wider text-cyan-300">
@@ -70,7 +72,7 @@ export default function Hero() {
         </div>
 
         {/* Painel visual de BI */}
-        <div className="relative">
+        <div className="relative animate-fade-up animate-delay-350">
           <div className="absolute -inset-5 rounded-3xl bg-gradient-to-r from-blue-600/20 to-violet-600/20 blur-3xl" />
 
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#101827]/90 p-6 shadow-2xl backdrop-blur-xl">
